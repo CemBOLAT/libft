@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:36:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/04 14:36:37 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/07 22:52:58 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -20,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	size_t		check;
 
 	i = 0;
-	last_pos = (0);
+	last_pos = 0;
 	check = 0;
 	if (c > 127)
 		return ((char *)s);
@@ -40,3 +41,11 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+
+int main()
+{
+	const char *s = "mertmert";
+	printf("%s\n",ft_strrchr(s,'e'));
+	printf("%s",strrchr(s,'e'));
+}
+

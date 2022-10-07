@@ -1,3 +1,3 @@
 all:
-	@echo "cemal";
+	@echo "gay";
 	

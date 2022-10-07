@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:22:43 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/07 23:43:08 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/04 23:32:48 by c.bolat           #+#    #+#             */
+/*   Updated: 2022/10/04 23:32:48 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*p;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	p = (unsigned char *)s;
-	while (n > 0)
+	str = (char*)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i] == '\0')
 	{
-		*p = '\0';
-		p++;
-		n--;
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
+		i++;
 	}
-	return (s);
+	str[j] = '\0';
+	return (str);
+}
+
+int main(){
+    const char *p = "cemal";
+    printf("%s",ft_substr(p,2,2));
 }

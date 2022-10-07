@@ -3,39 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:57:17 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/04 15:42:03 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/07 22:37:10 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <string.h>
 
-char *ft_strchr(const char *s1, int c)
+char	*ft_strchr(const char *s1, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] == c)
-    {
-        if (s[i] == c)
-            return ((char *)(s + 1));
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		if (s1[i] == c)
+			return ((char *)(s1 + i));
+		i++;
+	}
+	return (0);
 }
 /*
-char    *ft_strchr(const char *s, int c)
+int main()
 {
-    int i;
-
-    i = 0;
-    while (s[i++] != '\0')
-    {
-        if (s[i] == c)
-    	    return ((char *)(s + i));
-    }
-    return (0);
+	const char *s1 = "ceal";
+	int c = 'm';
+	printf("%s--", ft_strchr(s1,c));
+	printf("%s", strchr(s1,c));
 }
 */

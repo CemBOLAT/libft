@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:48:55 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/04 15:21:49 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/07 23:56:07 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
+
 int	main()
 {
 	const char s[] = "cemal";
 	int c = 101;
 	printf("%s", ft_memchr(s,c,4));
 }
-*/
+

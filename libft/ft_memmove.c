@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:44:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/04 17:11:19 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/07 23:49:17 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,16 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
     return (dest);
 }
 
+
+/*
+    ////MERTCEMAL
+    MERTCEMALEMAL
+*/
+/*
 int main()
 {
-    void    *s = "mert";
-    void    *d = "s";
+    const void    *s = "mert";
+    void    *d;
     printf("%s",ft_memmove(d,s,4));
 }
+*/
