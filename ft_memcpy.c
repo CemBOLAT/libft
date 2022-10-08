@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:56:40 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/07 23:52:44 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/08 11:11:17 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	p_d = (unsigned char *)dest;
 	p_s = (unsigned char *)src;
 	i = 0;
-	if (!p_d || !p_s)
+	if (!p_d && !p_s)
 		return (0);
 	while (i < n)
 	{
@@ -33,7 +33,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 #include <cstddef>
 #include <stdio.h>
-*/
 
 int	main()
 {
@@ -42,4 +41,4 @@ int	main()
 	size_t	n = 112;
 	printf("%s",ft_memcpy(dest,src,n));
 }
-
+*/

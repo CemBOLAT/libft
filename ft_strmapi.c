@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:48:55 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/07 23:56:07 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/08 13:48:44 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/08 13:49:11 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	char			*res;
+	unsigned int	i;
 
-	if (!s)
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	res = (char *)malloc(i + 1);
+	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		if (*(unsigned char *)(s + i) == (unsigned char)c)
-			return ((void *)(s + i));
+		res[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	res[i] = '\0';
+	return (res);
 }
-
-int	main()
-{
-	const char s[] = "cemal";
-	int c = 101;
-	printf("%s", ft_memchr(s,c,4));
-}
-
