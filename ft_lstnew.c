@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:57:07 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 15:07:11 by cbolat           ###   ########.fr       */
+/*   Created: 2022/10/08 14:41:25 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/08 14:52:13 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*p;
-	size_t			i;
+	t_list	*res;
 
-	i = 0;
-	p = (unsigned char *)s;
-	if (!p)
-		return (0);
-	while (n > i)
-	{
-		p[i] = c;
-		i++;
-	}
-	return (s);
+	res = (t_list *)malloc(sizeof(res));
+	if (!res)
+		return (NULL);
+	res->content = content;
+	res->next = NULL;
+	return (res);
 }
-/*
-#include <string.h>
-int main(void)
-{
-	char str[50];
-	strcpy(str, "This is string.h library function");
-	printf("%s\n",str);
-	ft_memset(str, 100, 5);
-	printf("%s",str);
-	return (0);
-}
-*/

@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:57:07 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 15:07:11 by cbolat           ###   ########.fr       */
+/*   Created: 2022/10/08 16:39:17 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/08 18:03:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned char	*p;
-	size_t			i;
-
-	i = 0;
-	p = (unsigned char *)s;
-	if (!p)
-		return (0);
-	while (n > i)
+	while (1 == 1)
 	{
-		p[i] = c;
-		i++;
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
-	return (s);
 }
+
 /*
-#include <string.h>
-int main(void)
+int main()
 {
-	char str[50];
-	strcpy(str, "This is string.h library function");
-	printf("%s\n",str);
-	ft_memset(str, 100, 5);
-	printf("%s",str);
-	return (0);
+    t_list  *lst;
+    char    *c = "cemal";
+    char    *m = "mert";
+    char    *e = "emre";
+    lst = malloc(sizeof(lst));
+    lst->content = (char *)m;
+    lst->next = malloc(sizeof(lst));
+    lst->next->content = (char *)e;
+    printf("%s",ft_lstlast(lst)->content);
 }
 */

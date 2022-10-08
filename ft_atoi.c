@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:32:14 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/07 22:18:15 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/08 18:22:27 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_atoi(const char *str)
 {
-	int				i;
+	size_t			i;
 	unsigned int	res;
 	int				sign;
-	int				sign_nbr;
+	size_t			sign_nbr;
 
 	i = 0;
 	res = 0;

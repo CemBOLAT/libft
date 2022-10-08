@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:36:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 13:49:36 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/08 17:51:29 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int main()
 {
-	const char *s = "mertmert";
-	printf("%s\n",ft_strrchr(s,'e'));
-	printf("%s",strrchr(s,'e'));
-}
-*/
+	const char *s = "mertçert";
+	printf("%s\n",ft_strrchr(s,200));
+	printf("%s",strrchr(s,200));
+}*/
