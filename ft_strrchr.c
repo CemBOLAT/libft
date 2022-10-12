@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:36:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 17:51:29 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 15:25:45 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -41,10 +41,18 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
+/*/
 int main()
 {
-	const char *s = "mertçert";
-	printf("%s\n",ft_strrchr(s,200));
+	const char *s = "mrtseret";
+	printf("%s\n",ft_strrchr(s, 200));
 	printf("%s",strrchr(s,200));
-}*/
+}
+*/
+
+/*	
+	const char *cemal = "sem";
+	------cemal-----------------
+	char const *mert = "mert";
+	----------sert--------------
+*/

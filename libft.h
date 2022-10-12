@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:33:05 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 18:02:41 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/09 18:51:50 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,22 @@ void	ft_bzero(void *s, size_t n);//ok
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);//ok!!!!!!!//dikkat
 void	*ft_memmove(void *dest, const void *src, size_t len);//yapmadım
-void	*ft_memchr(const void *s, int c, size_t n);// olmadı
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);// ok
+int		ft_memcmp(const void *s1, const void *s2, size_t n);//ok
 
 void	*ft_calloc(size_t count, size_t size); // ok
 
-char	*ft_substr(const char *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(const char *s, unsigned int start, size_t len);//ok
+char	*ft_strjoin(char const *s1, char const *s2);//ok
 
-char	*ft_strtrim(char const *s1, char const *set);//!dikkat
+char	*ft_strtrim(char const *s1, char const *set);//ok
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); //ok
-void	ft_striteri(char *s, void (*f)(unsigned int, char *)); //ol
-void	ft_putchar_fd(char c, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *)); //ok
+void	ft_putchar_fd(char c, int fd);//ok
 char	*ft_itoa(int n); // hehe bitti
-char	**ft_split(char const *s, char c);//25satır
+
+char	**ft_split(char const *s, char c);//malloc soru var
 //boıuns
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);//olmadı

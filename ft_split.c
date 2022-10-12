@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:12:35 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 17:37:46 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 15:58:10 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,13 @@ static int	ft_word_len(char const *str, int i, char c)
 	return (res);
 }
 
+static int	is_this_char(const char *s, char c, int i)
+{
+	while (s[i] != '\0' && (s[i] == c))
+		i++;
+	return (i);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -60,14 +67,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] != '\0' && (s[i] == c))
-			i++;
+		i = is_this_char(s, c, i);
 		if (s[i] != '\0')
 		{
 			ini_i = 0;
 			res[m_i] = malloc(sizeof(char) * (ft_word_len(s, i, c) + 1));
-			if (!res[m_i])
-				return (NULL);
 			while (s[i] != '\0' && s[i] != c)
 				res[m_i][ini_i++] = s[i++];
 			res[m_i++][ini_i] = '\0';
@@ -79,11 +83,14 @@ char	**ft_split(char const *s, char c)
 /*
 int main()
 {
-    char const *s = "bonjour je m'appel Arthur";
+    char const *s = "bonjouuuuur je m'appel Arthurumistik";
     char c = 'u';
     char **res;
 
     res = ft_split(s,c);
-    printf("%s",res[1]);
+    printf("%s-",res[0]);
+    printf("%s-",res[1]);
+    printf("%s-",res[2]);
+    printf("%s-",res[3]);
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 10:48:36 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 12:10:54 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:15:46 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,17 +61,17 @@ static int	ft_sign_con(int n)
 char	*ft_itoa(int n)
 {
 	char	*res;
-	char	digit_l;
-	char	i;
+	int	digit_l;
+	int	i;
 
 	i = 0;
 	digit_l = ft_digitlen(n);
-	if (n < -2147483648)
+	if (n == -2147483648)
 	{
 		res = "-2147483648\0";
 		return (res);
 	}
-	res = (char *)malloc(sizeof(char) * (digit_l + 1));
+	res = malloc(sizeof(char) * (digit_l + 1));
 	if (!res)
 		return (NULL);
 	if (n < 0)
@@ -79,7 +79,7 @@ char	*ft_itoa(int n)
 	n = ft_sign_con(n);
 	while (n != 0)
 	{
-		res[i++] = n % 10 + '0';
+		res[i++] = (n % 10) + '0';
 		n /= 10;
 	}
 	res[digit_l] = '\0';

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 16:39:17 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 18:03:58 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:07:58 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (1 == 1)
-	{
-		if (lst->next == NULL)
-			return (lst);
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 		lst = lst->next;
-	}
+	return (lst);
 }
 
-/*
+
 int main()
 {
     t_list  *lst;
@@ -30,9 +29,9 @@ int main()
     char    *m = "mert";
     char    *e = "emre";
     lst = malloc(sizeof(lst));
-    lst->content = (char *)m;
+    lst->content = m;
     lst->next = malloc(sizeof(lst));
-    lst->next->content = (char *)e;
+    lst->next->content = e;
+    lst->next->next = NULL;
     printf("%s",ft_lstlast(lst)->content);
 }
-*/

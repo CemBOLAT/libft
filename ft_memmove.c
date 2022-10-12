@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:44:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 13:44:49 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/09 21:24:34 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -42,7 +43,9 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 int main()
 {
     const void    *s = "mert";
-    void    *d;
-    printf("%s",ft_memmove(d,s,4));
+	void    *d = "cdadada";
+    printf("%s-",ft_memmove(d+2,d,4));
+    //printf("%s-",memmove(d+2,d,4));
+    //printf("%s",memmove(d,s,4));
 }
 */
