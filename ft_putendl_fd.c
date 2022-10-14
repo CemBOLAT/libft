@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:45:48 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 13:45:49 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 23:13:29 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

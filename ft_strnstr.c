@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:25:23 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 13:26:25 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 22:58:31 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -37,13 +36,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*
-int main()
-{
-    const char *b = "mert";
-    const char *l = "er";
-    size_t len = 3;
-    printf("%s\n", ft_strnstr(b,l,len));
-    printf("%s", strnstr(b,l,len));
-}
-*/

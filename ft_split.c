@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:12:35 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 15:58:10 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 22:26:14 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,17 +80,3 @@ char	**ft_split(char const *s, char c)
 	res[m_i] = 0;
 	return (res);
 }
-/*
-int main()
-{
-    char const *s = "bonjouuuuur je m'appel Arthurumistik";
-    char c = 'u';
-    char **res;
-
-    res = ft_split(s,c);
-    printf("%s-",res[0]);
-    printf("%s-",res[1]);
-    printf("%s-",res[2]);
-    printf("%s-",res[3]);
-}
-*/

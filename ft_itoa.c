@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 10:48:36 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 16:15:46 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 21:34:34 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,14 @@ static int	ft_sign_con(int n)
 char	*ft_itoa(int n)
 {
 	char	*res;
-	int	digit_l;
-	int	i;
+	int		digit_l;
+	int		i;
 
 	i = 0;
 	digit_l = ft_digitlen(n);
 	if (n == -2147483648)
 	{
-		res = "-2147483648\0";
+		res = "-2147483648";
 		return (res);
 	}
 	res = malloc(sizeof(char) * (digit_l + 1));
@@ -86,9 +86,3 @@ char	*ft_itoa(int n)
 	res = ft_strrev(res);
 	return (res);
 }
-/*
-int	main()
-{
-	printf("%s",ft_itoa(23221));
-}
-*/

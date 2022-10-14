@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:30:14 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 15:49:41 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 23:06:41 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (res);
 }
-
+/*/
 void del(void *content)
 {
     free(content);
@@ -61,3 +61,4 @@ int main()
     printf("%s", (*lst)->content);
     return 0;
 }
+*/

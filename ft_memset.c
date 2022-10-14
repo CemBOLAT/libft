@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:57:07 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/08 15:07:11 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/12 23:10:09 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-#include <string.h>
-int main(void)
-{
-	char str[50];
-	strcpy(str, "This is string.h library function");
-	printf("%s\n",str);
-	ft_memset(str, 100, 5);
-	printf("%s",str);
-	return (0);
-}
-*/

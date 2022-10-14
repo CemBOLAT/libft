@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 16:46:40 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 16:26:12 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 23:07:57 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp->next = new;
 	return ;
 }
-
+/*/
 int main()
 {
     t_list  **lst;
@@ -56,4 +56,4 @@ int main()
     (*lst)->next->next->next = NULL;
     printf("%s",(*lst)->next->next->content);
 }
-
+*/

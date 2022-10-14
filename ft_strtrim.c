@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:50:08 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/09 19:03:16 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 22:59:32 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
-/*
-int	main()
-{
-	char const *s1 = "acqemalaa";
-	char const *set = "caem";
-	printf("%s",ft_strtrim(s1,set));
-}
-*/

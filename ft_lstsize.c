@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:01:59 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 15:49:49 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 23:06:25 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (res);
 }
-
+/*/
 int main()
 {
     t_list  *lst;
@@ -41,5 +41,6 @@ int main()
 	printf("43");
     printf("%d",ft_lstsize(lst));
 }
+*/
 //listeyi liste kadar aç
 //

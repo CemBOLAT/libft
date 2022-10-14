@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:01:32 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/09 19:04:22 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/12 23:05:58 by c.bolat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-/*
-int	main()
-{
-	const char *s = "cemal";
-	char *dest = "sem";
-	printf("%d",ft_strlcpy(dest,s,2));
-}
-*/
