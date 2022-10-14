@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:33:05 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 23:15:19 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/15 01:20:26 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -60,7 +57,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int n);
 
-char	**ft_split(char const *s, char c);//malloc soru var
+char	**ft_split(char const *s, char c);
 //boıuns
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);//olmadı
