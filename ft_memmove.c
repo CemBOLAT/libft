@@ -6,7 +6,7 @@
 /*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:44:37 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 22:17:43 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:36:16 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	unsigned char	*d;
 	unsigned char	*s;
 
+	i = 0;
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
 	if ((s) > (d))
