@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:56:40 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 22:07:27 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/15 12:24:10 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/15 13:01:01 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		p_d[i] = p_s[i];
 		i++;
 	}
-	p_d[i] = '\0';
 	return (dest);
 }

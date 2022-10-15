@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:30:14 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 01:16:20 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/15 18:40:10 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*res;
 	t_list	*temp;
 
-	if (!lst)
+	if (!lst || !*f)
 		return (NULL);
-	res = ft_lstnew(f(lst->content));
-	if (!res)
-		return (NULL);
-	temp = res;
-	lst = lst->next;
 	while (lst)
 	{
-		temp->next = ft_lstnew(f(lst->content));
-		if (!temp->next)
+		temp = lstnew(lst->content);
+		if (!temp)
 		{
-			ft_lstclear(&res, del);
+			del(temp->content);
+			free(temp);
 			return (NULL);
 		}
-		temp = temp->next;
-		lst = lst->next;
+		ft_lstadd_back
+		
 	}
 	return (res);
 }
-/*/
+/*
 void del(void *content)
 {
     free(content);

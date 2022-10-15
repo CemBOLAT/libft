@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 15:01:32 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 23:05:58 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/15 14:29:42 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/15 16:47:17 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -34,3 +35,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
+
+/*
+int	main()
+{
+	char	dst[13] = "cemal";
+	const char	src[12] = "csr";
+	printf("%zu\n%zu",ft_strlcpy(dst,src,12),strlcpy(dst,src,12));
+}
+*/

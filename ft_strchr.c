@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:57:17 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 15:21:41 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/15 14:14:50 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/15 14:14:54 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s1, int c)
 int main()
 {
 	const char *s1 = "cemal";
-	int c = 'm';
+	int c = 'q';
 	printf("%s--", ft_strchr(s1,c));
 	printf("%s", strchr(s1,c));
 }

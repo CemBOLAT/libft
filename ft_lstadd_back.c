@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 16:46:40 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 23:07:57 by c.bolat          ###   ########.fr       */
+/*   Updated: 2022/10/15 17:22:17 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp->next = new;
 	return ;
 }
-/*/
+/*
 int main()
 {
     t_list  **lst;
@@ -45,7 +45,7 @@ int main()
     new = malloc(sizeof(t_list));
     new->content = l;
     new->next = NULL;
-    if (!(*lst))
+    if (!(lst))
         return (0);
     *lst = malloc(sizeof(t_list));
     (*lst)->content = (char *)f;
@@ -54,6 +54,8 @@ int main()
     (*lst)->next->next = malloc(sizeof(t_list));
     (*lst)->next->next->content = (char *)t;
     (*lst)->next->next->next = NULL;
-    printf("%s",(*lst)->next->next->content);
+    printf("%s\n",(*lst)->next->content);
+    ft_lstadd_back(lst,new);
+    printf("%s",(*lst)->next->next->next->content);
 }
 */

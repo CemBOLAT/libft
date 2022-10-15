@@ -1,27 +1,27 @@
-NAME := libft.a
+NAME = libft.a
 
-CC := gcc
+FLAG = -Wall -Wextra -Werror
 
-CFLAGS := -Wall -Wextra -Werror
+SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
 
-HEADER := libft.h
-
-SRCS := *.c
-
-OBJECTS := $(SRCS:.c=.o)
+BONUS = $(shell find . -name "ft_lst*.c")
 
 all: $(NAME)
 
-$(NAME): $(SRCS) $(HEADER)
-	@$(CC) $(CFLAGS) -c $(SRCS)
-	@ar -rcs $(NAME) $(OBJECTS)
+$(NAME):
+	@gcc $(FLAG) -c $(SRC)
+	@ar rc $(NAME) *.o
+
+bonus:
+	@gcc $(FLAG) -c $(BONUS)
+	@ar rc $(NAME) *.o
 
 clean:
-	@rm -rf $(OBJECTS)
+	@rm -rf  *.o
 
 fclean: clean
 	@rm -rf $(NAME)
 
-re:	fclean all
+re: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY: all bonus clean fclean re

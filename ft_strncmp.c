@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: c.bolat <cbolat@student.42kocaeli.com.t    +#+  +:+       +#+        */
+/*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:31:33 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/12 22:56:12 by c.bolat          ###   ########.fr       */
+/*   Created: 2022/10/15 17:02:14 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/15 17:02:16 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
+int	main()
+{
+	const char *s1 = "cemal";
+	const char *s2  = "boalt";
+	printf("%d",ft_strncmp(s1,s2,1));
+}
+*/

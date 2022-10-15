@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:33:05 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 01:20:26 by cbolat           ###   ########.fr       */
+/*   Created: 2022/10/15 16:24:21 by cbolat            #+#    #+#             */
+/*   Updated: 2022/10/15 16:24:28 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -34,15 +35,15 @@ int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);//bir bak
 char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	*ft_memset(void *s, int c, size_t n);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);//bir bak
 void	ft_bzero(void *s, size_t n);
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);//ok!!!!!!!//dikkat
-void	*ft_memmove(void *dest, const void *src, size_t len);//yapmadım
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
@@ -56,7 +57,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 char	*ft_itoa(int n);
-
 char	**ft_split(char const *s, char c);
 //boıuns
 t_list	*ft_lstnew(void *content);
