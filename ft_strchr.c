@@ -26,12 +26,12 @@ char	*ft_strchr(const char *s1, int c)
 	}
 	return (0);
 }
-/*
+
 int main()
 {
 	const char *s1 = "cemal";
 	int c = 'q';
-	printf("%s--", ft_strchr(s1,c));
+	//printf("%s--", ft_strchr(s1,c));
 	printf("%s", strchr(s1,c));
 }
-*/
+
