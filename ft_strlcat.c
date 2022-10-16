@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:28:35 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 16:31:18 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 15:33:37 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (res);
 }
-/*
-#include <string.h>
-int main(void)
-{
-    char s1[11] = "CemalA";
-    char s2[] = " World!";
-	printf("ft_strcat :: %s :: %zu\n", s1, ft_strlcat(s1, s2, 8));
-	printf("strcat :: %s :: %zu\n", s1, strlcat(s1, s2, 8));
-	printf("%s",s1);
-}
-*/

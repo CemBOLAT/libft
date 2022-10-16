@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:24:00 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 12:24:01 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 12:27:26 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	ptr = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-	i = 0;
+	i = 1;
 	if (n == 0)
 		return (0);
 	while (*ptr == *ptr2 && i < n)

@@ -6,83 +6,52 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:17:32 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 12:20:00 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 15:32:19 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_digitlen(int n)
+static int	ft_numlen(int num)
 {
-	int	res;
+	int	i;
 
-	res = 0;
-	if (n < 0)
-	{
-		res = 1;
-		n *= -1;
-	}
-	while (n != 0)
-	{
-		n /= 10;
-		res++;
-	}
-	return (res);
-}
-
-static char	*ft_strrev(char *str)
-{
-	int		i;
-	int		len;
-	char	temp;
-
+	if (num == 0)
+		return (1);
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	len = i;
-	i = 0;
-	while (i < len / 2)
+	while (num > 0 || num < 0)
 	{
-		temp = str[i];
-		str[i] = str[len - i - 1];
-		str[len - i - 1] = temp;
+		num /= 10;
 		i++;
 	}
-	return (str);
-}
-
-static int	ft_sign_con(int n)
-{
-	if (n < 0)
-		n *= -1;
-	return (n);
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
+	int		len;
 	char	*res;
-	int		digit_l;
-	int		i;
+	long	nbr;
 
-	i = 0;
-	digit_l = ft_digitlen(n);
-	if (n == -2147483648)
+	nbr = n;
+	len = ft_numlen(nbr);
+	if (n < 0)
 	{
-		res = "-2147483648";
-		return (res);
+		len++;
+		nbr = -nbr;
 	}
-	res = malloc(sizeof(char) * (digit_l + 1));
+	res = malloc(sizeof(char) * len + 1);
 	if (!res)
 		return (NULL);
-	if (n < 0)
-		res[digit_l - 1] = '-';
-	n = ft_sign_con(n);
-	while (n != 0)
+	res[len] = '\0';
+	while (nbr > 0)
 	{
-		res[i++] = (n % 10) + '0';
-		n /= 10;
+		res[--len] = nbr % 10 + 48;
+		nbr /= 10;
 	}
-	res[digit_l] = '\0';
-	res = ft_strrev(res);
+	if (n < 0)
+		res[0] = '-';
+	if (n == 0)
+		res[0] = '0';
 	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:03:03 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/15 17:03:16 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 15:33:56 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_pos;
-	size_t		last_spot;
-	size_t		i;
-	size_t		check;
+	char	*lastspot;
 
-	i = 0;
-	last_pos = 0;
-	check = 0;
+	lastspot = 0;
 	if (c > 127)
 		return ((char *)s);
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] == c)
-		{
-			last_spot = i;
-			check++;
-		}
-		i++;
+		if (*s == c)
+			lastspot = (char *)s;
+		s++;
 	}
-	if (check != 0)
-	{
-		last_pos = (s + last_spot);
-		return ((char *)last_pos);
-	}
+	if (lastspot)
+		return (lastspot);
+	if (c == '\0')
+		return ((char *)s);
 	return (0);
 }
