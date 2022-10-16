@@ -6,12 +6,11 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:29:42 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/16 15:33:44 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 17:24:18 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -4,20 +4,20 @@ SRCS		= ft_*.c
 
 BNS_SRCS	= ft_lst*.c\
 
-OBJS		= $(SRCS:%.c=%.o)
+OBJS		= $(SRCS:*.c=*.o)
 
-BNS_OBJS	= $(BNS_SRCS:%.c=%.o)
+BNS_OBJS	= $(BNS_SRCS:*.c=*.o)
 
-FLAGS		= -Wall -Werror -Wextra -std=c99
+FLAGS		= -Wall -Werror -Wextra
 
 $(NAME):
-	@gcc $(FLAGS) -c $(SRCS) -I ./
+	@gcc $(FLAGS) -c $(SRCS)
 	@ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
 bonus: $(NAME)
-	@gcc $(FLAGS) -c $(BNS_SRCS) -I ./
+	@gcc $(FLAGS) -c $(BNS_SRCS)
 	@ar rcs $(NAME) $(BNS_OBJS)
 
 clean:

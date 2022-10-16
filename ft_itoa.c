@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:17:32 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/16 16:06:28 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 16:46:06 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_numlen(int num)
 	if (num == 0)
 		return (1);
 	i = 0;
-	while (num > 0 || num < 0)
+	while (num != 0)
 	{
 		num /= 10;
 		i++;
