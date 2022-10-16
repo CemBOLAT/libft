@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:17:32 by cbolat            #+#    #+#             */
-/*   Updated: 2022/10/16 15:32:19 by cbolat           ###   ########.fr       */
+/*   Updated: 2022/10/16 16:06:28 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ char	*ft_itoa(int n)
 	res = malloc(sizeof(char) * len + 1);
 	if (!res)
 		return (NULL);
-	res[len] = '\0';
+	res[len--] = '\0';
 	while (nbr > 0)
 	{
-		res[--len] = nbr % 10 + 48;
+		res[len--] = nbr % 10 + 48;
 		nbr /= 10;
 	}
 	if (n < 0)
