@@ -6,7 +6,7 @@
 /*   By: cbolat <cbolat@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:24:21 by cbolat            #+#    #+#             */
-/*   Updated: 2023/10/09 00:32:04 by cbolat           ###   ########.fr       */
+/*   Updated: 2023/10/09 01:06:28 by cbolat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 // Part 1 - Libc functions
 int		ft_isalnum(int c);
